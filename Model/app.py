@@ -49,9 +49,9 @@ def handle_request():
         modelOut = model.predict(data)
         strLabel = ""
         if np.argmax(modelOut) == 1:
-            strLabel = 'Melanoma'
-        else:
             strLabel = 'Not Melanoma'
+        else:
+            strLabel = 'Melanoma'
         return strLabel, 200
    
 
